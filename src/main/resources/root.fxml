@@ -10,9 +10,9 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField layoutX="246.0" layoutY="62.0" />
-            <Button layoutX="295.0" layoutY="103.0" mnemonicParsing="false" text="Szukaj" />
-            <Label layoutX="179.0" layoutY="161.0" text="Temperatura odczuwalna" />
+            <TextField fx:id="city" layoutX="246.0" layoutY="62.0" />
+            <Button onAction="#setCity" fx:id="search" layoutX="295.0" layoutY="103.0" mnemonicParsing="false" text="Szukaj" />
+            <Label fx:id="TemperatureIn" layoutX="179.0" layoutY="161.0" text="Temperatura odczuwalna" />
             <Label layoutX="357.0" layoutY="161.0" prefHeight="17.0" prefWidth="77.0" />
          </children>
     </AnchorPane>
