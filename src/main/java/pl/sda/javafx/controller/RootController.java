@@ -61,7 +61,25 @@ public class RootController implements Initializable {
         String url = "http://api.apixu.com/v1/current.json";
         String apiKey = "75ef5138a56b445faf3120447191003";
         WeatherService weatherService = new WeatherService(url, apiKey);
-        Weather weather = weatherService.getCityWeather(city.getText().replace(" ", "_"));
+        Weather weather = weatherService.getCityWeather(city.getText().replace(" ", "_")
+                        .replace("ą", "a")
+                        .replace("Ą", "A")
+                        .replace("ć", "c")
+                        .replace("Ć", "C")
+                        .replace("ń", "n")
+                        .replace("Ń", "N")
+                        .replace("Ż", "Z")
+                        .replace("Ź", "Z")
+                        .replace("ż", "z")
+                        .replace("ź", "z")
+                        .replace("ś", "s")
+                        .replace("Ś", "S")
+                        .replace("Ł", "L")
+                        .replace("ł", "l")
+                        .replace("ę", "e")
+                        .replace("Ę", "E")
+                        .replace("Ó", "O")
+                        .replace("ó", "o"));
         cityName.setText(weather.getLocation().getName());
         temperature.setText(String.valueOf(weather.getCurrent().getTemp_c()));
         country.setText(weather.getLocation().getCountry());
