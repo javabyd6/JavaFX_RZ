@@ -6,15 +6,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.javafx.controller.RootController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField layoutX="246.0" layoutY="62.0" />
-            <Button layoutX="295.0" layoutY="103.0" mnemonicParsing="false" text="Szukaj" />
-            <Label layoutX="179.0" layoutY="161.0" text="Temperatura odczuwalna" />
-            <Label layoutX="357.0" layoutY="161.0" prefHeight="17.0" prefWidth="77.0" />
-         </children>
+             <TextField fx:id="city" layoutX="49.0" layoutY="47.0" />
+             <Button fx:id="search" layoutX="222.0" layoutY="47.0" mnemonicParsing="false" onAction="#setCity" text="Szukaj" />
+             <Label layoutX="295.0" layoutY="141.0" prefHeight="17.0" prefWidth="105.0" text="Pogoda ogólnie:" />
+             <Label fx:id="weatherOverall" layoutX="442.0" layoutY="141.0" prefHeight="17.0" prefWidth="105.0" text="weatherOverall" />
+             <Label layoutX="49.0" layoutY="196.0" prefHeight="17.0" prefWidth="85.0" text="Godzina i data:" />
+             <Label fx:id="localTimeCity" layoutX="171.0" layoutY="196.0" prefHeight="17.0" prefWidth="117.0" text="localTimeCity" />
+             <Label layoutX="49.0" layoutY="21.0" prefHeight="17.0" prefWidth="149.0" text="Podaj Miasto :" />
+             <Label layoutX="49.0" layoutY="102.0" prefHeight="17.0" prefWidth="92.0" text="Kraj:" />
+             <Label fx:id="country" layoutX="174.0" layoutY="102.0" prefHeight="17.0" prefWidth="74.0" text="country" />
+             <Label layoutX="49.0" layoutY="128.0" prefHeight="25.0" prefWidth="74.0" text="Szerokość:" />
+             <Label fx:id="plat" layoutX="174.0" layoutY="128.0" prefHeight="17.0" prefWidth="85.0" text="plat" />
+             <Label layoutX="50.0" layoutY="159.0" prefHeight="17.0" prefWidth="85.0" text="Długość:" />
+             <Label fx:id="plon" layoutX="174.0" layoutY="159.0" prefHeight="17.0" prefWidth="59.0" text="plon" />
+             <Label layoutX="295.0" layoutY="111.0" prefHeight="17.0" prefWidth="132.0" text="Temperatura:" />
+             <Label fx:id="temperature" layoutX="441.0" layoutY="111.0" prefHeight="17.0" prefWidth="92.0" text="temperature" />
+           </children>
     </AnchorPane>
   </children>
 </VBox>
