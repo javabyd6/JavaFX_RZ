@@ -87,6 +87,7 @@ public class RootController implements Initializable {
         plon.setText(String.valueOf(weather.getLocation().getLon()));
         localTimeCity.setText(weather.getLocation().getLocaltime());
         weatherOverall.setText(weather.getCurrent().getCondition().getText());
+        
         String getImageURL = "http:"+weather.getCurrent().getCondition().getIcon();
         Image image = new Image(getImageURL);
         imageView.setImage(image);
